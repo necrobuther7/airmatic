@@ -1,0 +1,16 @@
+ 
+
+{shop_url}
+
+Hola {firstname} {lastname},
+
+Programa de Patrocinio
+
+Hemos creado un cupón en su nombre por recomendar un amigo.
+Este es el código de su cupón: {voucher_num}, con un valor de {voucher_num}
+
+Simplemente copie y pegue este código durante el proceso de pago de su próximo pedido.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop-project.org/)

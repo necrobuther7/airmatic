@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '3316',
+    'database_name' => 'airmatic',
+    'database_user' => 'root',
+    'database_password' => '',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'nV71MkvKWg47uiZKbE4KivPQGIsLU4dJyqCCd2HsTp1Ob0Hcw91PashfxNo2EOri',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2024-01-22',
+    'locale' => 'es-ES',
+    'use_debug_toolbar' => true,
+    'cookie_key' => '85TWgyv7J10brrI1ENNYLb832Kz4ktTdofFdNV4ZTHS2UKKRAdiqt4GpD30mD7mf',
+    'cookie_iv' => 'fPRfI7HfBuKTeCYiAoRJ6UmAYsZsaWQo',
+    'new_cookie_key' => 'def00000517e9fdbba87d72106a251f72ad2ec2cef649334257781b61c8d391337565849b0572f430875fb8ca44d066e1ecc9d10cac90f3424b56dc49e2671a68ddabc45',
+  ),
+);
