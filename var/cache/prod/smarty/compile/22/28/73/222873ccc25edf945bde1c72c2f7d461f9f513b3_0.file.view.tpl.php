@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2024-01-22 20:38:36
+/* Smarty version 4.2.1, created on 2025-05-16 18:40:11
   from 'C:\xampp\htdocs\airmatic\admin487j9cbs1jljrtipdi4\themes\default\template\controllers\dashboard\helpers\view\view.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_65af189ca9f1a6_61381096',
+  'unifunc' => 'content_6827ccdb23e4b0_03026980',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65af189ca9f1a6_61381096 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6827ccdb23e4b0_03026980 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
 >
 	var dashboard_ajax_url = '<?php echo $_smarty_tpl->tpl_vars['link']->value->getAdminLink('AdminDashboard');?>

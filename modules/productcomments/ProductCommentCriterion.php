@@ -47,6 +47,9 @@ class ProductCommentCriterion extends ObjectModel
         ],
     ];
 
+    /**
+     * @deprecated 6.0.0 - migrated to src/Repository/ProductCommentCriterionRepository
+     */
     public function delete()
     {
         if (!parent::delete()) {
@@ -96,6 +99,8 @@ class ProductCommentCriterion extends ObjectModel
      * Link a Comment Criterion to a product
      *
      * @return bool succeed
+     *
+     * @deprecated 6.0.0 - migrated to src/Repository/ProductCommentCriterionRepository
      */
     public function addProduct($id_product)
     {
@@ -113,6 +118,8 @@ class ProductCommentCriterion extends ObjectModel
      * Link a Comment Criterion to a category
      *
      * @return bool succeed
+     *
+     * @deprecated 6.0.0 - migrated to src/Repository/ProductCommentCriterionRepository
      */
     public function addCategory($id_category)
     {
@@ -130,6 +137,8 @@ class ProductCommentCriterion extends ObjectModel
      * Add grade to a criterion
      *
      * @return bool succeed
+     *
+     * @deprecated 4.0.0
      */
     public function addGrade($id_product_comment, $grade)
     {
@@ -154,19 +163,14 @@ class ProductCommentCriterion extends ObjectModel
      * Get criterion by Product
      *
      * @return array Criterion
+     *
+     * @deprecated 4.0.0
      */
     public static function getByProduct($id_product, $id_lang)
     {
         if (!Validate::isUnsignedId($id_product) ||
             !Validate::isUnsignedId($id_lang)) {
             exit(Tools::displayError());
-        }
-        $alias = 'p';
-        $table = '';
-        // check if version > 1.5 to add shop association
-        if (version_compare(_PS_VERSION_, '1.5', '>')) {
-            $table = '_shop';
-            $alias = 'ps';
         }
 
         $cache_id = 'ProductCommentCriterion::getByProduct_' . $id_product . '-' . $id_lang;
@@ -180,8 +184,8 @@ class ProductCommentCriterion extends ObjectModel
 					ON (pcc.`id_product_comment_criterion` = pccp.`id_product_comment_criterion` AND pccp.`id_product` = ' . $id_product . ')
 				LEFT JOIN `' . _DB_PREFIX_ . 'product_comment_criterion_category` pccc
 					ON (pcc.`id_product_comment_criterion` = pccc.`id_product_comment_criterion`)
-				LEFT JOIN `' . _DB_PREFIX_ . 'product' . $table . '` ' . $alias . '
-					ON (' . $alias . '.id_category_default = pccc.id_category AND ' . $alias . '.id_product = ' . $id_product . ')
+				LEFT JOIN `' . _DB_PREFIX_ . 'product_shop` ps
+					ON (ps.id_category_default = pccc.id_category AND ps.id_product = ' . $id_product . ')
 				WHERE pccl.`id_lang` = ' . $id_lang . '
 				AND (
 					pccp.id_product IS NOT NULL
@@ -201,6 +205,8 @@ class ProductCommentCriterion extends ObjectModel
      * Get Criterions
      *
      * @return array Criterions
+     *
+     * @deprecated 6.0.0
      */
     public static function getCriterions($id_lang, $type = false, $active = false)
     {
@@ -224,6 +230,9 @@ class ProductCommentCriterion extends ObjectModel
         return $criterions;
     }
 
+    /**
+     * @deprecated 6.0.0
+     */
     public function getProducts()
     {
         $res = Db::getInstance()->executeS('
@@ -240,6 +249,9 @@ class ProductCommentCriterion extends ObjectModel
         return $products;
     }
 
+    /**
+     * @deprecated 6.0.0
+     */
     public function getCategories()
     {
         $res = Db::getInstance()->executeS('
@@ -256,6 +268,9 @@ class ProductCommentCriterion extends ObjectModel
         return $criterions;
     }
 
+    /**
+     * @deprecated 6.0.0
+     */
     public function deleteCategories()
     {
         return Db::getInstance()->execute('
@@ -263,6 +278,9 @@ class ProductCommentCriterion extends ObjectModel
 			WHERE `id_product_comment_criterion` = ' . (int) $this->id);
     }
 
+    /**
+     * @deprecated 6.0.0
+     */
     public function deleteProducts()
     {
         return Db::getInstance()->execute('
@@ -270,6 +288,9 @@ class ProductCommentCriterion extends ObjectModel
 			WHERE `id_product_comment_criterion` = ' . (int) $this->id);
     }
 
+    /**
+     * @deprecated 6.0.0
+     */
     public static function getTypes()
     {
         // Instance of module class for translations

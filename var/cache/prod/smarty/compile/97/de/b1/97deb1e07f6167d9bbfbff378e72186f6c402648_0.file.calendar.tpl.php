@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2024-01-22 20:38:36
+/* Smarty version 4.2.1, created on 2025-05-16 18:40:11
   from 'C:\xampp\htdocs\airmatic\admin487j9cbs1jljrtipdi4\themes\default\template\helpers\calendar\calendar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_65af189ca6d2a6_99021678',
+  'unifunc' => 'content_6827ccdb20de10_11008569',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65af189ca6d2a6_99021678 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6827ccdb20de10_11008569 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="datepicker" class="row row-padding-top hide">
 	<div class="col-lg-12">
 		<div class="daterangepicker-days">

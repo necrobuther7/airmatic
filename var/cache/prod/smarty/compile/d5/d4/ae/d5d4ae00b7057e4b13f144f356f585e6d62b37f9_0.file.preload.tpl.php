@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2024-01-22 20:38:49
+/* Smarty version 4.2.1, created on 2025-05-16 17:55:08
   from 'C:\xampp\htdocs\airmatic\admin487j9cbs1jljrtipdi4\themes\new-theme\public\preload.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_65af18a9aeeb10_88916713',
+  'unifunc' => 'content_6827c24c3a57e1_66561390',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65af18a9aeeb10_88916713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6827c24c3a57e1_66561390 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link
       rel="preload"
       href="<?php echo $_smarty_tpl->tpl_vars['admin_dir']->value;?>

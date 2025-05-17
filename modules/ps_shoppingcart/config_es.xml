@@ -2,7 +2,7 @@
 <module>
     <name>ps_shoppingcart</name>
     <displayName><![CDATA[Carrito de compra]]></displayName>
-    <version><![CDATA[2.0.7]]></version>
+    <version><![CDATA[2.0.4]]></version>
     <description><![CDATA[Mostrar un icono de carrito de compra en tus p&aacute;ginas y la cantidad de art&iacute;culos que contiene. ]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[front_office_features]]></tab>

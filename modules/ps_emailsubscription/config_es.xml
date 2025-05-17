@@ -2,7 +2,7 @@
 <module>
     <name>ps_emailsubscription</name>
     <displayName><![CDATA[Suscripci&oacute;n a nuestro bolet&iacute;n de noticias]]></displayName>
-    <version><![CDATA[2.7.1]]></version>
+    <version><![CDATA[2.8.2]]></version>
     <description><![CDATA[Estate en contacto con tus clientes, a&ntilde;ade un formulario de suscripci&oacute;n a la newsletter en tu tienda.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[pricing_promotion]]></tab>

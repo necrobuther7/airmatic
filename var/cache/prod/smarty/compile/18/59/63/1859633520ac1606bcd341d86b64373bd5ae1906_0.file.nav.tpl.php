@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2024-01-22 20:38:36
+/* Smarty version 4.2.1, created on 2025-05-16 18:40:11
   from 'C:\xampp\htdocs\airmatic\admin487j9cbs1jljrtipdi4\themes\default\template\nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_65af189cba8ee3_74753701',
+  'unifunc' => 'content_6827ccdb3b2284_42888986',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65af189cba8ee3_74753701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6827ccdb3b2284_42888986 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar" role="navigation" id="nav-sidebar">
 	<span class="menu-collapse" data-toggle-url="<?php echo $_smarty_tpl->tpl_vars['toggle_navigation_url']->value;?>
 ">

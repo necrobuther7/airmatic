@@ -32,7 +32,13 @@ jQuery(document).ready(function () {
   const reportCommentUrl = commentsList.data('report-comment-url');
   const commentPrototype = commentsList.data('comment-item-prototype');
 
-  emptyProductComment.hide();
+  const pagesListId = '#product-comments-list-pagination';
+  const pageIdPrefix = '#pcl_page_';
+  const totalPages = commentsList.data('total-pages');
+  const prevCount = 0;
+  const nextCount = totalPages + 1;
+  const gapText = '&hellip;';
+
   $('.grade-stars').rating();
 
   prestashop.on('updatedProduct', function() {
@@ -59,31 +65,80 @@ jQuery(document).ready(function () {
     reportCommentPostErrorModal.modal('show');
   }
 
-  function paginateComments(page) {
-    $.get(commentsListUrl, {page: page}, function(jsonResponse) {
-      if (jsonResponse.comments && jsonResponse.comments.length > 0) {
-        populateComments(jsonResponse.comments);
-        if (jsonResponse.comments_nb > jsonResponse.comments_per_page) {
-          $('#product-comments-list-pagination').pagination({
-            currentPage: page,
-            items: jsonResponse.comments_nb,
-            itemsOnPage: jsonResponse.comments_per_page,
-            cssStyle: '',
-            prevText: '<i class="material-icons" data-icon="chevron_left"></i>',
-            nextText: '<i class="material-icons" data-icon="chevron_right"></i>',
-            useAnchors: false,
-            displayedPages: 2,
-            onPageClick: paginateComments
-          });
-        } else {
-          $('#product-comments-list-pagination').hide();
-        }
-      } else {
-        commentsList.html('');
-        emptyProductComment.show();
-        commentsList.append(emptyProductComment);
+  async function fetchComments(page) {  
+    let response = await fetch(commentsListUrl + "&page=" + page);
+
+    if (response.status === 200) {
+        let data = await response.text();
+        populateComments((JSON.parse(data)).comments);
+    }
+  }
+  
+  $(pagesListId + ' li').on('click',
+    function() {
+      let oldCount = commentsList.data('current-page');
+      let newCount = $(this).index();
+      
+      if (newCount === prevCount) {  // click prev
+        newCount = oldCount - 1;
+        if (newCount <= 0) return;
       }
-    });
+      if (newCount === nextCount) { // click next
+        newCount = oldCount + 1;
+        if (newCount >= nextCount) return;
+      }
+      
+      $(`${pageIdPrefix}${oldCount} span`).removeClass('current');
+      $(`${pageIdPrefix}${oldCount}`).removeClass('active');
+      
+      fetchComments(newCount); // fetch new page's comments                  
+
+      $(`${pageIdPrefix}${newCount}`).addClass('active');
+      $(`${pageIdPrefix}${newCount} span`).addClass('current');
+      
+      $(`${pageIdPrefix}${newCount} span`).html(newCount);
+      commentsList.data('current-page', newCount);      
+
+      if (newCount === 1) // disable prev
+        $(`${pageIdPrefix}${prevCount}`).addClass('disabled');
+      else   
+        $(`${pageIdPrefix}${prevCount}`).removeClass('disabled');
+
+      if (newCount === totalPages)  // disable next
+        $(`${pageIdPrefix}${nextCount}`).addClass('disabled');
+      else
+        $(`${pageIdPrefix}${nextCount}`).removeClass('disabled');
+
+      // long list with over 9 pages      
+      if (9 <= totalPages) {        
+        generateGap(newCount, prevCount);
+        generateGap(newCount, nextCount);
+      }
+    }
+  )
+
+  function generateGap(start, stop) {
+    if (start == stop)
+      return 0;
+    let step = (start < stop) ? +1 : -1;
+    let i = start + step;  
+    if (4 < Math.abs(stop - start)) {
+      $(`${pageIdPrefix}${i}`).removeClass('hidden').removeClass('disabled');
+      $(`${pageIdPrefix}${i} span`).html(i);
+      i = i + step;
+      $(`${pageIdPrefix}${i}`).removeClass('hidden').removeClass('disabled');
+      $(`${pageIdPrefix}${i} span`).html(gapText);
+      i = i + step;
+      for (; i != stop - 2*step; i = i + step) {
+        $(`${pageIdPrefix}${i}`).addClass('hidden');
+      }  
+    }
+    else {
+      for (; i != stop; i = i + step) {        
+        $(`${pageIdPrefix}${i}`).removeClass('hidden').removeClass('disabled');
+        $(`${pageIdPrefix}${i} span`).html(i);        
+      }          
+    } 
   }
 
   function populateComments(comments) {
@@ -125,9 +180,18 @@ jQuery(document).ready(function () {
     commentsList.append($comment);
   }
 
-  function updateCommentUsefulness($comment, commentId, usefulness) {
-    $.post(updateCommentUsefulnessUrl, {id_product_comment: commentId, usefulness: usefulness}, function(jsonData){
-      if (jsonData) {
+  async function updateCommentUsefulness($comment, commentId, usefulness) {
+    try {
+      const response = await fetch(updateCommentUsefulnessUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "id_product_comment=" + commentId + "&usefulness=" + usefulness,
+      });
+
+      if (response.status === 200) {        
+        const jsonData = await response.json();
         if (jsonData.success) {
           $('.useful-review-value', $comment).html(jsonData.usefulness);
           $('.not-useful-review-value', $comment).html(jsonData.total_usefulness - jsonData.usefulness);
@@ -138,9 +202,9 @@ jQuery(document).ready(function () {
       } else {
         showUpdatePostCommentErrorModal(productCommentUpdatePostErrorMessage);
       }
-    }).fail(function() {
-      showUpdatePostCommentErrorModal(productCommentUpdatePostErrorMessage);
-    });
+    } catch (error) {
+      showUpdatePostCommentErrorModal(error);
+    }
   }
 
   function confirmCommentAbuse(commentId) {
@@ -149,21 +213,40 @@ jQuery(document).ready(function () {
       if (!confirm) {
         return;
       }
-      $.post(reportCommentUrl, {id_product_comment: commentId}, function(jsonData){
-        if (jsonData) {
-          if (jsonData.success) {
-            reportCommentPostedModal.modal('show');
-          } else {
-            showReportCommentErrorModal(jsonData.error);
-          }
-        } else {
-          showReportCommentErrorModal(productCommentAbuseReportErrorMessage);
-        }
-      }).fail(function() {
-        showReportCommentErrorModal(productCommentAbuseReportErrorMessage);
-      });
+      confirmCommentAbuseFetch(commentId);
     })
   }
 
-  paginateComments(1);
+  async function confirmCommentAbuseFetch(commentId) {
+    try {
+      const response = await fetch(reportCommentUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },        
+        body: "id_product_comment=" + commentId,
+      });
+
+      if (response.status === 200) {        
+        const jsonData = await response.json();
+        if (jsonData.success) {
+          reportCommentPostedModal.modal('show');
+        } else {
+          showReportCommentErrorModal(jsonData.error);
+        }
+      } else {
+        showReportCommentErrorModal(productCommentAbuseReportErrorMessage);
+      }
+    } catch (error) {
+      showReportCommentErrorModal(error);
+    }
+  }
+
+  if (totalPages <= 1)
+    $(pagesListId).hide();
+    
+  if (totalPages > 0) {
+    emptyProductComment.hide();
+    $(`${pageIdPrefix}1`).trigger('click');    
+  }  
 });

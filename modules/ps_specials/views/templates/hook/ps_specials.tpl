@@ -1,5 +1,5 @@
 {*
-* 2007-2016 PrestaShop
+* 2007-2024 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,7 +18,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
+*  @copyright  2007-2024 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
@@ -30,5 +30,5 @@
       {include file="catalog/_partials/miniatures/product.tpl" product=$product}
     {/foreach}
   </div>
-  <a href="{$allSpecialProductsLink}">{l s='All sale products' d='Modules.Specials.Shop'}</a>
+  <a href="{$allSpecialProductsLink|escape:'html':'UTF-8'}">{l s='All sale products' d='Modules.Specials.Shop'}</a>
 </section>

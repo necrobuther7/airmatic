@@ -2,7 +2,7 @@
 <module>
     <name>ps_facetedsearch</name>
     <displayName><![CDATA[B&uacute;squeda por facetas]]></displayName>
-    <version><![CDATA[3.12.1]]></version>
+    <version><![CDATA[4.0.0]]></version>
     <description><![CDATA[Filtra tu cat&aacute;logo para ayudar a los visitantes a visualizar el &aacute;rbol de categor&iacute;as y a navegar m&aacute;s f&aacute;cilmente por tu tienda.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[front_office_features]]></tab>

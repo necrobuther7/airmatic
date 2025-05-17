@@ -2,7 +2,7 @@
 <module>
     <name>statsdata</name>
     <displayName><![CDATA[Explotaci&oacute;n de datos para las estad&iacute;sticas]]></displayName>
-    <version><![CDATA[2.1.1]]></version>
+    <version><![CDATA[2.1.2]]></version>
     <description><![CDATA[Recopile la mayor cantidad de informaci&oacute;n posible para mejorar las estad&iacute;sticas y llevar tu negocio m&aacute;s lejos.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[administration]]></tab>

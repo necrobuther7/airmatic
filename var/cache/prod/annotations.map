@@ -204,4 +204,5 @@
   203 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver',
   204 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
   205 => 'Symfony\\Component\\Security\\Http\\Controller\\UserValueResolver',
+  206 => 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterionLang',
 );

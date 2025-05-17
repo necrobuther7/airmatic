@@ -1,0 +1,70 @@
+Product ID;Active (0/1);Name *;Categories (x,y,z...);Price tax excluded;Tax rules ID;Wholesale price;On sale (0/1);Discount amount;Discount percent;Discount from (yyyy-mm-dd);Discount to (yyyy-mm-dd);Reference #;Supplier reference #;Supplier;Manufacturer;EAN13;UPC;MPN;Ecotax;Width;Height;Depth;Weight;Delivery time of in-stock products;Delivery time of out-of-stock products with allowed orders;Quantity;Minimal quantity;Low stock level;Receive a low stock alert by email;Visibility;Additional shipping cost;Unity;Unit price;Summary;Description;Tags (x,y,z...);Meta title;Meta keywords;Meta description;URL rewritten;Text when in stock;Text when backorder allowed;Available for order (0 = No, 1 = Yes);Product available date;Product creation date;Show price (0 = No, 1 = Yes);Image URLs (x,y,z...);Image alt texts (x,y,z...);Delete existing images (0 = No, 1 = Yes);Feature(Name:Value:Position);Available online only (0 = No, 1 = Yes);Condition;Customizable (0 = No, 1 = Yes);Uploadable files (0 = No, 1 = Yes);Text fields (0 = No, 1 = Yes);Out of stock action;Virtual product;File URL;Number of allowed downloads;Expiration date;Number of days;ID / Name of shop;Advanced stock management;Depends On Stock;Warehouse;Acessories  (x,y,z...)
+927;1;CCH40;Cilindros;354160;1;80;1;;5.5;2023-10-10;2023-10-11;CCH40;CCH40;;Airmatic;;;;1;0;0;0;0;;;10;1;0;0;;;;354160;"<h1><strong>Datos Técnicos</strong></h1>
+<p><strong>Fluido:</strong> Aceite VG32</p>
+<p><strong>Máx. Presión de Trabajo:</strong> 10.5 Bar ~ 152 PSI</p>
+<p><strong>Temperatura de Trabajo:</strong> -10°C a 60°C ~ 14°F a 140°F </p>
+<p><strong>Montaje:</strong> Flanche Posterior</p>
+<h1><strong>Materiales</strong></h1>
+<p><strong>Cabezas:</strong> Aluminio</p>
+<p><strong>Camisa:</strong> Aluminio</p>
+<p><strong>Sellos:</strong> NBR</p>";"<h1>TANQUE HIDRO-NEUMATICO 40 Ø</h1>
+<h2>Características</h2>
+<p>• Deposito de aceite para el manejo de cilindros a muy baja velocidad de avance, con movimiento continuo.</p>
+<p>• El sistema hidro-neumático combina la velocidad y el bajo costo del aire comprimido con la precisión del movimiento hidráulico</p>
+<p>• Aplicación en herramientas automatizadas</p>
+<p>• Indicador de nivel visual</p>
+<p></p>";CCH40;Meta title-CCH40;Meta keywords-CCH40;Meta description-CCH40;CCH40;In Stock;Current supply. Ordering availlable;1;0000-00-00;2022-10-10;1;http://localhost/prestashop/img/p/1/5/15.jpg;First alt text,Second alt text;0;;0;new;0;0;0;0;0;;;;;0;0;0;0;
+928;1;CCH63;Cilindros;510352;1;80;1;;5.5;2023-10-10;2023-10-11;CCH63;CCH63;;Airmatic;;;;1;0;0;0;0;;;10;1;0;0;;;;510352;"<h1><strong>Datos Técnicos</strong></h1>
+<p><strong>Fluido:</strong> Aire comprimido Filtrado, lubricado o no lubricado</p>
+<p><strong>Presión de Trabajo:</strong> 1,5 a 10 Bar ~ 22 a 145 PSI</p>
+<p><strong>Temperatura de Trabajo:</strong> 20°C a 70°C</p>
+<p><strong>Kit de Alta Temperatura:</strong> Hasta 150°C ~ 302°F</p>
+<p><strong>Amortiguación:</strong> Neumática, Regulable</p>
+<h1><strong>Materiales</strong></h1>
+<p><strong>Perfil:</strong> Aluminio inyectado</p>
+<p><strong>Cabezas:</strong> Aluminio inyectado</p>
+<p><strong>Vástago:</strong> Acero al carbón con 20? de superficie cromo-endurecida</p>
+<p><strong>Opcional:</strong> Acero Inoxidable</p>
+<p><strong>Empaques:</strong> TPU (Poliuretano Termoplástico) NBR</p>";"<h1>TANQUE HIDRO-NEUMATICO 63 Ø</h1>
+<h2>Características</h2>
+<p>• Deposito de aceite para el manejo de cilindros a muy baja velocidad de avance, con movimiento continuo.</p>
+<p>• El sistema hidro-neumático combina la velocidad y el bajo costo del aire comprimido con la precisión del movimiento hidráulico</p>
+<p>• Aplicación en herramientas automatizadas</p>
+<p>• Indicador de nivel visual</p>
+<p></p>";CCH63;Meta title-CCH63;Meta keywords-CCH63;Meta description-CCH63;CCH63;In Stock;Current supply. Ordering availlable;1;0000-00-00;2022-10-10;1;http://localhost/prestashop/img/p/1/5/15.jpg;First alt text,Second alt text;0;;0;new;0;0;0;0;0;;;;;0;0;0;0;
+929;1;CCH80;Cilindros;666592;1;80;1;;5.5;2023-10-10;2023-10-11;CCH80;CCH80;;Airmatic;;;;1;0;0;0;0;;;10;1;0;0;;;;666592;"<h1><strong>Datos Técnicos</strong></h1>
+<p><strong>Fluido:</strong> Aire comprimido Filtrado, lubricado o no lubricado</p>
+<p><strong>Presión de Trabajo:</strong> 1,5 a 10 Bar ~ 22 a 145 PSI</p>
+<p><strong>Temperatura de Trabajo:</strong> 20°C a 70°C</p>
+<p><strong>Kit de Alta Temperatura:</strong> Hasta 150°C ~ 302°F</p>
+<p><strong>Amortiguación:</strong> Neumática, Regulable</p>
+<h1><strong>Materiales</strong></h1>
+<p><strong>Perfil:</strong> Aluminio inyectado</p>
+<p><strong>Cabezas:</strong> Aluminio inyectado</p>
+<p><strong>Vástago:</strong> Acero al carbón con 20? de superficie cromo-endurecida</p>
+<p><strong>Opcional:</strong> Acero Inoxidable</p>
+<p><strong>Empaques:</strong> TPU (Poliuretano Termoplástico) NBR</p>";"<h1>TANQUE HIDRO-NEUMATICO 80 Ø</h1>
+<h2>Características</h2>
+<p>• Deposito de aceite para el manejo de cilindros a muy baja velocidad de avance, con movimiento continuo.</p>
+<p>• El sistema hidro-neumático combina la velocidad y el bajo costo del aire comprimido con la precisión del movimiento hidráulico</p>
+<p>• Aplicación en herramientas automatizadas</p>
+<p>• Indicador de nivel visual</p>
+<p></p>";CCH80;Meta title-CCH80;Meta keywords-CCH80;Meta description-CCH80;CCH80;In Stock;Current supply. Ordering availlable;1;0000-00-00;2022-10-10;1;http://localhost/prestashop/img/p/1/5/15.jpg;First alt text,Second alt text;0;;0;new;0;0;0;0;0;;;;;0;0;0;0;
+930;1;CCH100;Cilindros;812032;1;80;1;;5.5;2023-10-10;2023-10-11;CCH100;CCH100;;Airmatic;;;;1;0;0;0;0;;;10;1;0;0;;;;812032;"<h1><strong>Datos Técnicos</strong></h1>
+<p><strong>Fluido:</strong> Aire comprimido Filtrado, lubricado o no lubricado</p>
+<p><strong>Presión de Trabajo:</strong> 1,5 a 10 Bar ~ 22 a 145 PSI</p>
+<p><strong>Temperatura de Trabajo:</strong> 20°C a 70°C</p>
+<p><strong>Kit de Alta Temperatura:</strong> Hasta 150°C ~ 302°F</p>
+<p><strong>Amortiguación:</strong> Neumática, Regulable</p>
+<h1><strong>Materiales</strong></h1>
+<p><strong>Perfil:</strong> Aluminio inyectado</p>
+<p><strong>Cabezas:</strong> Aluminio inyectado</p>
+<p><strong>Vástago:</strong> Acero al carbón con 20? de superficie cromo-endurecida</p>
+<p><strong>Opcional:</strong> Acero Inoxidable</p>
+<p><strong>Empaques:</strong> TPU (Poliuretano Termoplástico) NBR</p>";"<h1>TANQUE HIDRO-NEUMATICO 100 Ø</h1>
+<h2>Características</h2>
+<p>• Deposito de aceite para el manejo de cilindros a muy baja velocidad de avance, con movimiento continuo.</p>
+<p>• El sistema hidro-neumático combina la velocidad y el bajo costo del aire comprimido con la precisión del movimiento hidráulico</p>
+<p>• Aplicación en herramientas automatizadas</p>
+<p>• Indicador de nivel visual</p>
+<p></p>";CCH100;Meta title-CCH100;Meta keywords-CCH100;Meta description-CCH100;CCH100;In Stock;Current supply. Ordering availlable;1;0000-00-00;2022-10-10;1;http://localhost/prestashop/img/p/1/5/15.jpg;First alt text,Second alt text;0;;0;new;0;0;0;0;0;;;;;0;0;0;0;

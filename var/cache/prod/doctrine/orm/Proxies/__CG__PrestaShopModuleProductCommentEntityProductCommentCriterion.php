@@ -67,10 +67,10 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'id', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'type', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'active'];
+            return ['__isInitialized__', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'id', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'type', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'active', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'names', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'criterionLangs', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'categories', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'products'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'id', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'type', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'active'];
+        return ['__isInitialized__', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'id', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'type', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'active', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'names', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'criterionLangs', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'categories', '' . "\0" . 'PrestaShop\\Module\\ProductComment\\Entity\\ProductCommentCriterion' . "\0" . 'products'];
     }
 
     /**
@@ -180,7 +180,117 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     /**
      * {@inheritDoc}
      */
-    public function getId()
+    public function getCriterionLangs()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCriterionLangs', []);
+
+        return parent::getCriterionLangs();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCriterionLangByLangId(int $langId)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCriterionLangByLangId', [$langId]);
+
+        return parent::getCriterionLangByLangId($langId);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addCriterionLang(\PrestaShop\Module\ProductComment\Entity\ProductCommentCriterionLang $criterionLang): \PrestaShop\Module\ProductComment\Entity\ProductCommentCriterion
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCriterionLang', [$criterionLang]);
+
+        return parent::addCriterionLang($criterionLang);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCriterionName(): string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCriterionName', []);
+
+        return parent::getCriterionName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNames()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNames', []);
+
+        return parent::getNames();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNames($langNames)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNames', [$langNames]);
+
+        return parent::setNames($langNames);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCategories()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategories', []);
+
+        return parent::getCategories();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCategories($selectedCategories): \PrestaShop\Module\ProductComment\Entity\ProductCommentCriterion
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategories', [$selectedCategories]);
+
+        return parent::setCategories($selectedCategories);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getProducts()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProducts', []);
+
+        return parent::getProducts();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setProducts($selectedProducts): \PrestaShop\Module\ProductComment\Entity\ProductCommentCriterion
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setProducts', [$selectedProducts]);
+
+        return parent::setProducts($selectedProducts);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getId(): int
     {
         if ($this->__isInitialized__ === false) {
             return (int)  parent::getId();
@@ -195,7 +305,7 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     /**
      * {@inheritDoc}
      */
-    public function getType()
+    public function getType(): int
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getType', []);
@@ -206,7 +316,7 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     /**
      * {@inheritDoc}
      */
-    public function setType($type)
+    public function setType(int $type): \PrestaShop\Module\ProductComment\Entity\ProductCommentCriterion
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setType', [$type]);
@@ -217,7 +327,7 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     /**
      * {@inheritDoc}
      */
-    public function isActive()
+    public function isActive(): bool
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'isActive', []);
@@ -228,12 +338,23 @@ class ProductCommentCriterion extends \PrestaShop\Module\ProductComment\Entity\P
     /**
      * {@inheritDoc}
      */
-    public function setActive($active)
+    public function setActive(bool $active): \PrestaShop\Module\ProductComment\Entity\ProductCommentCriterion
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setActive', [$active]);
 
         return parent::setActive($active);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isValid(): bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isValid', []);
+
+        return parent::isValid();
     }
 
 }
